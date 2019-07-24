@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container-fluid">
+  <div style="text-align:center">
+    <h1>
+      Your Crop details
+    </h1>
+   
+  </div>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <table ngFor='let crop of crops'>
+        <tr>
+          <th>ID</th>
+          <th>CROP</th>
+          <th>CATEGORY</th>
+          <th>DESCRIPTION</th>
+          <th>DATE CREATED</th>
+          <th>DATE UPDATED</th>
+        </tr>
+        <tr>
+          <td>{{crop.id}}</td>
+          <td>{{crop.name}}</td>
+          <td>{{crop.category_id}}</td>
+          <td>{{crop.description}}</td>
+          <td>{{crop.created_at}}</td>
+          <td>{{crop.updated_at}}</td>
+        </tr>
+
+        <app-crop-details [crop]='crop'></app-crop-details>
+      </table>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>
